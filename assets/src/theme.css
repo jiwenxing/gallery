@@ -167,8 +167,8 @@ section.info {
 .thumb img {
   overflow: hidden;
   margin: auto;
-  height: auto;
-  width: auto;
+  height: inherit;
+  width: inherit;
   max-width: 150px;
   max-height: 100px;
 }

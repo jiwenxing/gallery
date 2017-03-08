@@ -1,22 +1,27 @@
 module.exports = {
-	title: 'Zing Gallery',
+	title: 'Serene years, endless time',
 	wording: {
 		noAccess: '抱歉，你没有权限访问'
 	},
 	albums: {
-		"贵阳": {
-		  thumbnail : "IMG_0331.JPG",
-		  sort: 1
-		}, 
-		"千户苗寨": {
+		/*"相册1": {},
+        "相册2": {},*/
+        "Macau": {
+        	thumbnail : "20160918_114817.jpg"
+        },
+		"银川": {
+		  thumbnail : "DSCF1677.JPG"
+		  // sort: 1
+		}
+		/*"Quebec Canada": {
 		  description : "没有什么能够阻挡",
 		  thumbnail : "IMG_0424.jpg",
-		  name: "千户苗寨"
+		  name: "Quebec Canada"
 		},
 		"私密": {
 		  description : "私密",
 		  name: "私密 | 密码是233",
 		  password: "233"
-		}
+		}*/
 	}
 }

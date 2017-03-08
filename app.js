@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/assets/dist/'))
 app.use('/', require('./lib/gallery.js')(Object.assign({
   staticFiles : 'resources/photos',
   urlRoot : '/',
-  title : 'Zing Gallery',
+  title : 'Totoro',
   render : false
 }, cfg)), function(req, res, next){
   return res.render('gallery', Object.assign({ 
