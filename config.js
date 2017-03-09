@@ -6,9 +6,9 @@ module.exports = {
 	albums: {
 		/*"相册1": {},
         "相册2": {},*/
-        "Macau": {
+        /*"Macau": {
         	thumbnail : "20160918_114817.jpg"
-        },
+        },*/
 		"银川": {
 		  thumbnail : "DSCF1677.JPG"
 		  // sort: 1
