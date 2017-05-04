@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type">
+  <meta content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <title>设置免密支付</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <script>
+    (function() {
+      var baseFontSize = 100;
+      var baseWidth = 375;
+
+      var set = function() {
+        var clientWidth = document.documentElement.clientWidth || window.innerWidth;
+
+        var rem = 100;
+        if (clientWidth != baseWidth) {
+          rem = Math.floor(clientWidth / baseWidth * baseFontSize);
+        }
+
+        document.querySelector('html').style.fontSize = rem + 'px';
+      }
+      set();
+
+      window.addEventListener('resize', set);
+    }());
+  </script>
+  <style>
+    html{font-size:16px;}
+    html,body{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight-color:transparent;}
+    body{
+      margin: 0px; padding: 0px;
+      width:100%;
+      background: #f0f0f0;
+      color:#3e3e3e;
+      font-size:15px;
+
+    }
+
+    dl,dt,dd,ol,ul,li,p,h1,h2,h3,h4,h5,h6,div,section,time,s,i,article,span,a,input,button,textarea,form{margin:0;padding:0;
+      background-clip: padding-box; /*Android圆角问题*/
+      border-width:thin; /*Retina屏的1px边框*/
+      -webkit-tap-highlight-color:rgba(255,255,255,0) /*消除ios和android下触摸元素时出现半透明灰色遮罩*/
+    }
+    ol,ul,li{list-style: none;}
+    input,textarea,button{outline:none;margin:0;padding:0;box-sizing: border-box;
+      -webkit-appearance:none; /*消除ios input内阴影*/
+    }
+    button{border:none 0; background: none;}
+    .clear{clear:both;}
+    #dingdong_all{width: 100%;height: 100%;}
+    .hidden {
+      display: none;
+    }
+
+
+    /* 设置/重置免密支付口令页 start */
+    .voiceToken-wrap{
+      padding-bottom:84px;
+    }
+    .voiceToken-box{
+      padding:15px 15px 40px 15px;
+      background: #fff;
+      margin-top:10px;
+    }
+    .voiceToken-box .tit{
+      line-height:24px;
+    }
+    .voiceToken-box .inpt-voiceToken{
+      /*position: absolute;
+      top:-100px;
+      opacity: 0;
+      border:none;*/
+      width:200px;
+      height:100px;
+      overflow:hidden;
+    }
+    .voiceToken-box .voiceToken-inputBox{
+      margin-top:35px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 90%;
+      border:#a0a0a0 solid 1px;
+      margin-left:5%;
+    }
+    .voiceToken-box .voiceToken-inputBox li{
+      -webkit-box-flex:1;
+      -webkit-flex:1;
+      -moz-box-flex:1;
+      -ms-flex:1;
+      flex:1;
+      height:0.52rem;
+      line-height:0.52rem;
+      font-size: 0.18rem;
+      border-left:#d6d6d6 solid 1px;
+      text-align: center
+    }
+    .voiceToken-box .voiceToken-inputBox li:first-child{
+      border-left:0;
+    }
+    .voiceNotice-box{
+      line-height: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+    }
+    .voiceNotice-box .tit, .voiceNotice-box .paragraph{
+      line-height: 20px;
+      padding:3px 0;
+    }
+    /* 设置/重置免密支付口令页 end */
+  </style>
+</head>
+
+<body>
+
+  <section class="voiceToken-wrap">
+    <div class="voiceToken-box">
+      <h4 class="tit">设置免密支付口令</h4>
+      <input type="tel" class="inpt-voiceToken" id="inpt-voiceToken" value="">
+      <ul class="voiceToken-inputBox">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+</body>
+<script src="http://cdn.cdnjs.net/zepto/1.2.0/zepto.min.js"></script>
+<script>
+  var getCookie = function(name){
+    let arr = [];
+    let reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    if(arr = document.cookie.match(reg)){
+      return arr[2];
+    }else{
+      return null;
+    }
+  };
+
+  /*
+   * 设置/重置免密支付口令页
+   */
+  var setVoiceTokenApp = {
+    init: function(){
+      // 输入免密支付口令
+      this.inputVoiceToken();
+
+    },
+
+    /* 输入免密支付口令 */
+    inputVoiceToken: function() {
+
+      // 自动获取焦点并清空value;
+      $('#inpt-voiceToken').focus().val('');
+
+      /* 点击获取焦点 弹出输入法 */
+      $('.voiceToken-inputBox').on('click', function(){
+        $('#inpt-voiceToken').focus();
+      });
+
+      /* 输入口令 */
+      $('#inpt-voiceToken').on('input', function(){
+        var _self = $(this);
+        // 判断是否超过了6位
+        var overMaxLimit = _self.val().length >= 7 ? true : false;
+        // 截取前6位
+        var token = _self.val().replace(/\D/g,"").substring(0,6);
+        _self.val(token);
+        // 口令满足6位时 页面下方操作按钮才变为可点击的高亮状态
+        if(token.length >= 6){
+          $('.btn-fixedbottom').removeClass('disabled');
+        } else {
+          $('.btn-fixedbottom').addClass('disabled');
+        }
+        // if(tokenLen)
+        // 如果超过6位则不执行此处方法
+        if(!overMaxLimit) {
+          var aToken = token.split('');
+          for(var i=0; i < 6; i++){
+            $('.voiceToken-inputBox li').eq(i).text(aToken[i]);
+          }
+        }
+      });
+    }
+
+  };
+
+  $(function(){
+    /*设置/重置免密支付口令页*/
+    setVoiceTokenApp.init();
+  });
+</script>
+
+</html>
