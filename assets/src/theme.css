@@ -5,7 +5,7 @@
 body {
   position: relative;
   margin-bottom: 30px;
-  background: url(./img/bg.png) repeat #dde1e5;
+  /*background: url(./img/bg.png) repeat #dde1e5;*/
   font-family: lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
 
