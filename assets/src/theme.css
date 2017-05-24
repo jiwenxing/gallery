@@ -51,16 +51,18 @@ h1, h2, h3 {
   text-shadow: 1px 1px 1px #fff;
 }
 .album-title {
-  margin: 20px 0 0px;
+  margin: 15px 0 0px;
   color: #383838;
   text-shadow: 1px 1px 1px #fff;
   font-size: 0.25rem;
   font-family: Zapfino,Papyrus,KaiTi,STHeiti;
+  line-height: 50px;
 }
 .des-title {
-  margin: 0px 0 10px 6px;
+  margin: 0px 0 10px 0px;
   color: #666;
   text-shadow: 1px 1px 1px #fff;
+  font-size: 0.2rem;
 }
 .empty-title {
   margin: 100px 10px;
