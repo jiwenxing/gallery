@@ -13,6 +13,10 @@ module.exports = {
 		  thumbnail : "DSCF1677.JPG"
 		  // sort: 1
 		},
+		"乌镇": {
+		  thumbnail : "DSC_0099.JPG"
+		  // sort: 1
+		},
 		"Quebec Canada": {
 		  // description : "没有什么能够阻挡",
 		  thumbnail : "DSCN0826.JPG",
