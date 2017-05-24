@@ -44,7 +44,7 @@ h1, h2, h3 {
 }
 
 .album-title-top, .album-title {
-  margin: 0px 0 20px;
+  margin: 20px 0 0px;
   color: #383838;
   text-shadow: 1px 1px 1px #fff;
 }
