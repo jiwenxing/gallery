@@ -43,7 +43,12 @@ h1, h2, h3 {
   clear: both;
 }
 
-.album-title-top, .album-title {
+.album-title-top{
+  margin: 0px 0 20px;
+  color: #383838;
+  text-shadow: 1px 1px 1px #fff;
+}
+.album-title {
   margin: 20px 0 0px;
   color: #383838;
   text-shadow: 1px 1px 1px #fff;
