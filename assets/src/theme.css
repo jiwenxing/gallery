@@ -10,12 +10,13 @@ body {
 }
 
 h1 {
-  font-family: Zapfino,Phosphate,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-  font-size: larger;
+  font-family: Zapfino,Impact,Phosphate,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  font-size: 0.3em;
 }
 
 h2 {
-  font-family: Herculanum;
+  font-family: Herculanum,Papyrus,SimHei,BiauKai;
+  font-size:0.25rem;
 }
 
 .breadcrumb {
@@ -32,6 +33,7 @@ h2 {
   top: 0;
   font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace;
   text-shadow: 0 1px #0a0c10;
+  font-size: 0.2rem;
 }
 .breadcrumb a {
   color: #159bfd;
@@ -52,6 +54,8 @@ h1, h2, h3 {
   margin: 20px 0 0px;
   color: #383838;
   text-shadow: 1px 1px 1px #fff;
+  font-size: 0.3rem;
+  font-family: Zapfino,Papyrus,KaiTi,BiauKai;
 }
 .des-title {
   margin: 0px 0 10px 6px;

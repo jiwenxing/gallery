@@ -3,6 +3,22 @@
 	<title><%- title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<script src="./main.js"></script>
+  <script>
+   (function() {
+        var baseFontSize = 100;
+        var baseWidth = 1280;
+        var set = function() {
+          var clientWidth = document.documentElement.clientWidth || window.innerWidth;
+          var rem = 100;
+          if(clientWidth != baseWidth) {
+            rem = Math.floor(clientWidth / baseWidth * baseFontSize);
+          }
+          document.querySelector('html').style.fontSize = rem + 'px';
+        }
+        set();
+        window.addEventListener('resize', set);
+   }());
+</script>
 </head>
 <body>
   <div class="layout">
