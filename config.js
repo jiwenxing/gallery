@@ -14,7 +14,7 @@ module.exports = {
 		  // sort: 1
 		},
 		"乌镇": {
-		  thumbnail : "DSC_0099.JPG"
+		  thumbnail : "DSC_0099.jpg"
 		  // sort: 1
 		},
 		"Quebec Canada": {
