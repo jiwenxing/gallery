@@ -6,7 +6,7 @@ module.exports = {
 	albums: {
         "Macau": {
         	description : "东方拉斯维加斯",
-        	thumbnail : "20160918_114817.jpg"
+        	thumbnail : "20160910_114817.jpg"
         },
 		"银川": {
 		  description : "传说中的西部小江南",
