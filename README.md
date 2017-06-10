@@ -35,7 +35,6 @@ if you would like to make the gallery avaliable for everyone on internet, a pers
 
 1. clone the repository to your server
 2. config nginx
-3. 
 ```yml
 server{
     listen     80;
@@ -50,7 +49,6 @@ server{
 ```
 
 3. run scripts continuously
-4. 
 ```
 forever start app.js
 ```
