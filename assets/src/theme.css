@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  font-family: Zapfino,Impact,Phosphate,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  font-family: Zapfino,Impact,Phosphate,lucida,helvetica,STKaiti,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
   font-size: 0.25em;
 }
 
@@ -40,15 +40,17 @@ h2 {
 }
 
 h1, h2, h3 {
-  padding-left: 10px;
+  /*padding-left: 10px;*/
   font-weight: 300;
   clear: both;
 }
 
 .album-title-top{
-  margin: 0px 0 20px;
+  /*margin: 0px 0 20px;*/
   color: #383838;
-  text-shadow: 1px 1px 1px #fff;
+  text-shadow: 1px 1px 1px #9c9494;
+  font-size: 0.35rem;
+  padding-left: 10px;
 }
 .album-title {
   margin: 15px 0 0px;
@@ -63,6 +65,7 @@ h1, h2, h3 {
   color: #666;
   text-shadow: 1px 1px 1px #fff;
   font-size: 0.2rem;
+  padding-left: 18px;
 }
 .empty-title {
   margin: 100px 10px;
