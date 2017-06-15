@@ -22,6 +22,16 @@ module.exports = {
 		  description : "一次学术的朝圣之旅",
 		  thumbnail : "DSCN0826.JPG",
 		  name: "Quebec Canada"
+		},
+		"Thailand": {
+		  description : "热情洋溢的国度",
+		  thumbnail : "20160916_112725.jpg",
+		  name: "Thailand"
+		},
+		"西湖": {
+		  description : "残霞夕照西湖好，花坞苹汀，十顷波平，野岸无人舟自横。",
+		  thumbnail : "DSC_0043.JPG",
+		  name: "西湖"
 		}
 		/*"私密": {
 		  description : "私密",
