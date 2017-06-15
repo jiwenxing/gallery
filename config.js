@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'SERENE YEARS , ENDLESS TIME',
+	title: '时光掠影',
 	wording: {
 		noAccess: '抱歉，你没有权限访问'
 	},
