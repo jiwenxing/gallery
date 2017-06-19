@@ -1,5 +1,5 @@
 module.exports = {
-	title: '时光掠影',
+	title: '時光掠影',
 	wording: {
 		noAccess: '抱歉，你没有权限访问'
 	},
