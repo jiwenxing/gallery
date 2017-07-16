@@ -32,6 +32,11 @@ module.exports = {
 		  description : "残霞夕照西湖好，花坞苹汀，十顷波平，野岸无人舟自横。",
 		  thumbnail : "DSC_0043.JPG",
 		  name: "西湖"
+		},
+		"西塘": {
+		  description : "梦里西塘夜未央，江南古韵意犹长。",
+		  thumbnail : "DSC_0132.JPG",
+		  name: "西塘"
 		}
 		/*"私密": {
 		  description : "私密",
