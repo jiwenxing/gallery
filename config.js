@@ -37,6 +37,11 @@ module.exports = {
 		  description : "梦里西塘夜未央，江南古韵意犹长。",
 		  thumbnail : "DSC_0132.JPG",
 		  name: "西塘"
+		},
+		"绍兴": {
+		  description : "小学课文一日游",
+		  thumbnail : "DSC_0469.JPG",
+		  name: "绍兴"
 		}
 		/*"私密": {
 		  description : "私密",
