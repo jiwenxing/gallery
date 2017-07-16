@@ -34,7 +34,7 @@ module.exports = {
 		  name: "西湖"
 		},
 		"西塘": {
-		  description : "梦里西塘夜未央，江南古韵意犹长。",
+		  description : "梦里西塘夜未央，江南古韵意犹长。",AWP_029.jpg
 		  thumbnail : "DSC_0132.JPG",
 		  name: "西塘"
 		},
@@ -42,6 +42,11 @@ module.exports = {
 		  description : "小学课文一日游",
 		  thumbnail : "DSC_0469.JPG",
 		  name: "绍兴"
+		},
+		"海南": {
+		  description : "北纬28度的热情，照亮你的黑",
+		  thumbnail : "AWP_029.jpg",
+		  name: "海南"
 		}
 		/*"私密": {
 		  description : "私密",
