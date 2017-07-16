@@ -34,7 +34,7 @@ module.exports = {
 		  name: "西湖"
 		},
 		"西塘": {
-		  description : "梦里西塘夜未央，江南古韵意犹长。",AWP_029.jpg
+		  description : "梦里西塘夜未央，江南古韵意犹长。",
 		  thumbnail : "DSC_0132.JPG",
 		  name: "西塘"
 		},
