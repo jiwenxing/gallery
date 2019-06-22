@@ -57,4 +57,20 @@ scp -i ~/.ssh/totoro-key.pem ./resources/photos/Quebec\ Canada/123.jpg centos@ec
 
 when on windows, remember to change the pem directoy to `E:/git/totoro-key.pem`. 
 
+## 常见问题
+
+### /lib64/libc.so.6: version `GLIBC_2.14' not found
+自己编译安装 GLIBC_2.14，已下载到目录 `/usr/src`，解压后进入到目录依次执行以下命令
+
+```bash
+# 进入下载的源文件进行编译安装
+cd /usr/src/glibc-2.14/build
+../configure --prefix=/opt/glibc-2.14
+make -j4
+make install
+# 进入相册目录修改lib路径后启动应用
+cd /usr/app/album/
+export LD_LIBRARY_PATH=/opt/glibc-2.14/lib:$LD_LIBRARY_PATH
+forever start app.js
+```
 
